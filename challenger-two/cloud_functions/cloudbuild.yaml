@@ -1,0 +1,15 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - gc-cloud-storage
+  - --gen2
+  - --region=us-east1
+  - --source=.
+  - --allow-unauthenticated
+  - --trigger-http
+  - --runtime=python311
+  - --project=projeto-estudos-415711
+  - --entry-point=hello_gcs
