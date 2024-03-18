@@ -9,8 +9,7 @@ def gcs_trigger(event):
     data_dict = json.loads(data_str)
 
     bucket_name = 'challenger-data-enginner-logs'
-    storage_client = storage.Client()
-
+    storage_client = storage.Client() 
     bucket = storage_client.bucket(bucket_name)
     blobs = storage_client.list_blobs(bucket_name)
 
@@ -62,6 +61,6 @@ def gcs_trigger(event):
     print(f"Nome do objeto: {object_name}")
     print(f"Tipo do objeto: {object_type}")
     print(f"Atualização do objeto: {object_updated}")
-    print(f"Nome da Bucket: {bucket_name}")
+    print(f"Nome da Bucket: {bucket_name_output}")
     print(f"Classe de armazenamento: {bucket_storage}")
 
