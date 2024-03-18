@@ -12,4 +12,4 @@ steps:
   - --trigger-http
   - --runtime=python311
   - --project=projeto-estudos-415711
-  - --entry-point=hello_gcs
+  - --entry-point=gcs_trigger
